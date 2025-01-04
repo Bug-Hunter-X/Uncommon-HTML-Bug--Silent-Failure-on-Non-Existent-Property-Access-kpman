@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrectly accessing a non-existent property
+    const myDiv = document.getElementById('myDiv');
+    const paragraph = myDiv.querySelector('p');
+    const nonExistent = paragraph.nonExistentProperty;
+  </script>
+</body>
+</html>
