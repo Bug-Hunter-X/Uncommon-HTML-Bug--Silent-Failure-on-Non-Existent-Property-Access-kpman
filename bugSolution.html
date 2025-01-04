@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Corrected: Check for the existence of the property before accessing it
+    const myDiv = document.getElementById('myDiv');
+    const paragraph = myDiv.querySelector('p');
+    if(paragraph && paragraph.hasOwnProperty('textContent')){
+        console.log(paragraph.textContent);
+    } else {
+        console.error('Property does not exist or element is null');
+    }
+  </script>
+</body>
+</html>
